@@ -33,7 +33,11 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef __APPLE__
+#include "darwin_endian.h"
+#else
 #include <endian.h>
+#endif
 #include <getopt.h>
 #include <string.h>
 #include <stdbool.h>
